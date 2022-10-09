@@ -6,9 +6,9 @@ import csso from 'gulp-csso';
 import size from 'gulp-size';
 import rename from 'gulp-rename';
 import groupCssMediaQueries from 'gulp-group-css-media-queries';
-import notify from "gulp-notify";
+// import notify from "gulp-notify";
 import gulpIf from "gulp-if";
-import webpCss from "gulp-webp-css";
+// import webpCss from "gulp-webp-css";
 
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
@@ -22,18 +22,13 @@ const sass = gulpSass(dartSass);
 
 const styles = () => {
 	return gulp.src(path.styles.src, { sourcemaps: app.isDev })
-		.pipe(plumber({
-			errorHandler: notify.onError((error) => ({
-				title: "STYLES",
-				message: error.message,
-			}))
-		}))
 
+		.pipe(plumber())
 		.pipe(sass())
 		.pipe(gulpIf(app.isDev, shorthand()))
 		.pipe(gulpIf(app.isDev, autoprefixer()))
 		.pipe(groupCssMediaQueries())
-		.pipe(webpCss())
+		//.pipe(webpCss())
 
 		.pipe(size({title: "main.css"}))
 		.pipe(gulp.dest(path.styles.dest, { sourcemaps: app.isDev }))
@@ -42,6 +37,7 @@ const styles = () => {
 		.pipe(csso())
 		.pipe(size({title: "main.min.css"}))
 		.pipe(gulp.dest(path.styles.dest, { sourcemaps: app.isDev }))
-}
+
+};
 
 export default styles;

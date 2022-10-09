@@ -1,3 +1,10 @@
-import {func} from "./module/func.js";
+import Swiper from 'swiper';
 
-func();
+new Swiper('.swiper',{
+	direction: 'horizontal',
+	loop: true,
+	grabCursor: true,
+	delay: 1000,
+	speed: 800,
+	effect: 'slide',
+});

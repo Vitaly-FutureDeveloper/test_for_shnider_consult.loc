@@ -2,7 +2,13 @@ extends layout/app
 
 block page
 	include chunk/header
+	main.main
+		h1.visually-hidden Название компании
 
-	h1.title Hello world!!
+		include index/slider
+
+		.content-flex
+			include index/content-flex/news-sidebar
+			include index/content-flex/main-content
 
 	include chunk/footer

@@ -1,0 +1,39 @@
+.job{
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
+}
+
+.job__title{
+	@include text-reset;
+	font-size: 24px;
+	color: $content-color;
+	font-weight: 400;
+}
+
+.job-list{
+	@include no-list-style;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-wrap: wrap;
+
+	margin-top: 20px;
+
+	color: $content-color;
+}
+.job-list__item{
+	width: 260px;
+	&:nth-child(odd){
+		margin-right: 30px;
+	}
+}
+.job-list__title{
+	@include text-reset;
+	margin-top: 18px;
+	margin-bottom: 22px;
+}
+.job-list__text{
+	@include text-reset;
+
+}

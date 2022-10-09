@@ -1,0 +1,13 @@
+.contacts{
+	letter-spacing: 0.025em;
+	color: $link-color;
+	margin-right: 135px;
+}
+
+.contacts__list{
+	@include no-list-style;
+}
+
+.contacts__link{
+	color: $link-color;
+}

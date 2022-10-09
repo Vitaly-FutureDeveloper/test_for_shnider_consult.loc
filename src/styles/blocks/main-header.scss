@@ -1,0 +1,44 @@
+.main-header{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	background-color: #DCDCDC;
+	padding: 45px 0 50px;
+}
+
+.main-header__wrap{
+	display: flex;
+	justify-content: center;
+
+	width: 980px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.main-header__link{
+	display: block;
+}
+.main-header__block{
+	&:not(:last-child){
+		margin-right: 80px;
+	}
+}
+.main-header__title{
+	font-size: 17px;
+	line-height: 22px;
+	font-weight: 400;
+	letter-spacing: 0.025em;
+	color: #777777;
+}
+.main-header__tel{
+	@include text-reset;
+	font-size: 31px;
+	line-height: 46px;
+	font-weight: 800;
+	letter-spacing: 0.025em;
+}
+
+.main-header__tel-link{
+	color: $content-color;
+}

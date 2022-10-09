@@ -11,8 +11,8 @@ export default {
 	},
 
 	styles: {
-		src: pathSrc + "/styles/*.scss",
-		watch: pathSrc + "/styles/**/*.scss",
+		src: pathSrc + "/styles/*.{scss,sass,css}",
+		watch: pathSrc + "/styles/**/*.{scss,sass,css}",
 		dest: pathDest + "/styles",
 		stream: pathDest + "/styles/*.css"
 	},
@@ -25,8 +25,8 @@ export default {
 	},
 
 	img: {
-		src: pathSrc + "/assets/img/*.{png,jpg,jpeg,gif,svg}",
-		watch: pathSrc + "/assets/img/**/*.{png,jpg,jpeg,gif,svg}",
+		src: pathSrc + "/assets/img/*.{png,jpg,jpeg,gif,svg,ico}",
+		watch: pathSrc + "/assets/img/**/*.{png,jpg,jpeg,gif,svg,ico}",
 		dest: pathDest + "/assets/img",
 	}
 }

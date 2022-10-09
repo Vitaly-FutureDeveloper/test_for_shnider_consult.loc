@@ -25,7 +25,6 @@ const img = () => {
 
 		.pipe(newer(path.img.dest))
 		.pipe(webp(app.imagemin))
-
 		.pipe(gulp.dest(path.img.dest))
 }
 
