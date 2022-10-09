@@ -1,12 +1,13 @@
 footer.main-footer
-	.main-footer-wrap
+	.main-footer-wrap(itemprop="publisher" itemscope itemtype="https://schema.org/Organization")
 
 		.main-footer__block
 			section.contacts
-				header.contacts__title © 2012–2016 ЗАО «Компания»
+				meta(itemprop="email" content="email@email.ru")
+				header.contacts__title(itemprop="name") © 2012–2016 ЗАО «Компания»
 				ul.contacts__list
 					li.contacts__item
-						a.contacts__link(href="mail:info@name.ru") info@name.ru
+						a.contacts__link(href="mail:info@name.ru" itemprop="email") info@name.ru
 
 			nav
 				ul.nav-footer-list
@@ -24,4 +25,4 @@ footer.main-footer
 		section.links
 			a.links__link(href="/") Разработка сайта
 			span —
-			p.links__text компания «Шнайдер Консалт»
+			p.links__text(itemprop="name") компания «Шнайдер Консалт»

@@ -11,11 +11,12 @@ header.header
 			section.header__block
 				p.header__title Распродажа до <span class="js-date">15.02.16</span>!
 
-			section.header__block
+			section.header__block(itemscope itemtype="http://schema.org/LocalBusiness" href="tel:+73432525252")
+				meta(itemprop="telephone" content="+73432525252")
 				p.header__tel
-					a.header__tel-link(href="tel:+7 (343) 252-52-52") +7 (343) 252-52-52
+					a.header__tel-link(href="tel:+73432525252" itemprop="telephone") +7 (343) 252-52-52
 				p.header__tel
-					a.header__tel-link(href="tel:+7 (343) 252-52-52") +7 (343) 252-52-52
+					a.header__tel-link(href="tel:+73432525252" itemprop="telephone") +7 (343) 252-52-52
 
 	nav.menu
 		ul.nav-list

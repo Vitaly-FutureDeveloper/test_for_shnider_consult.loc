@@ -6,7 +6,7 @@ import path from "../config/path.js";
 
 const deploy = () => {
 	return gulp.src(path.deploy)
-		.pipe(ghPages)
+		.pipe(ghPages())
 };
 
 export default deploy;
