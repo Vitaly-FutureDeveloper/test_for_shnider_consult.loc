@@ -4,6 +4,7 @@ const pathDest = "public";
 export default {
 	src: pathSrc,
 	root: pathDest,
+	deploy: pathDest + "/**/*",
 
 	html: {
 		src: pathSrc + "/html/*.pug",

@@ -3,6 +3,7 @@ import html from "./gulp/tasks/html.js";
 import styles from "./gulp/tasks/styles.js";
 import clear from "./gulp/tasks/del.js";
 import scripts from "./gulp/tasks/scripts.js";
+import deploy from "./gulp/tasks/deploy.js";
 import img from "./gulp/tasks/images.js";
 import favicon from "./gulp/tasks/favicon.js";
 import browserSyncServe from "browser-sync";
@@ -49,6 +50,7 @@ export { clear };
 export { html };
 export { styles };
 export { scripts };
+export { deploy };
 export { img };
 export { favicon };
 

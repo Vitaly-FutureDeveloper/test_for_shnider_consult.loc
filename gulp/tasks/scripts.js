@@ -27,6 +27,6 @@ const scripts = () => {
 
 		.pipe(size({title: "main.js - babel-webpack"}))
 		.pipe(gulp.dest(path.scripts.dest, { sourcemaps: app.isDev }))
-}
+};
 
 export default scripts;

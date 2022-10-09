@@ -9,7 +9,7 @@
 
 .header__wrap{
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 
 	width: 980px;
 	margin-right: 10px;
@@ -19,11 +19,7 @@
 .header__link{
 	display: block;
 }
-.header__block{
-	&:not(:last-child){
-		margin-right: 80px;
-	}
-}
+
 .header__title{
 	font-size: 17px;
 	line-height: 22px;

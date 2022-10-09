@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+import {addDateToHTML} from "./module/addDayDateToText.js";
 
 new Swiper('.swiper',{
 	direction: 'horizontal',
@@ -8,3 +9,7 @@ new Swiper('.swiper',{
 	speed: 800,
 	effect: 'slide',
 });
+
+
+
+addDateToHTML.setMonday(".js-date");
