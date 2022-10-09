@@ -2,6 +2,7 @@ const pathSrc = "src";
 const pathDest = "public";
 
 export default {
+	src: pathSrc,
 	root: pathDest,
 
 	html: {
@@ -26,6 +27,7 @@ export default {
 
 	img: {
 		src: pathSrc + "/assets/img/*.{png,jpg,jpeg,gif,svg,ico}",
+		favicon: pathSrc + "/assets/img/favicon.ico",
 		watch: pathSrc + "/assets/img/**/*.{png,jpg,jpeg,gif,svg,ico}",
 		dest: pathDest + "/assets/img",
 	}

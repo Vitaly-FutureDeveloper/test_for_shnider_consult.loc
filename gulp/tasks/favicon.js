@@ -2,7 +2,6 @@ import gulp from "gulp";
 import plumber from "gulp-plumber";
 import newer from "gulp-newer";
 import imagemin from "gulp-imagemin";
-import webp from "gulp-webp";
 import notify from "gulp-notify";
 
 
@@ -10,8 +9,8 @@ import notify from "gulp-notify";
 import path from "../config/path.js";
 import app from "../config/app.js";
 
-const img = () => {
-	return gulp.src(path.img.src)
+const favicon = () => {
+	return gulp.src(path.img.favicon)
 		.pipe(plumber({
 			errorHandler: notify.onError((error) => ({
 				title: "Image",
@@ -21,12 +20,8 @@ const img = () => {
 
 		.pipe(newer(path.img.dest))
 		.pipe(imagemin(app.imagemin))
-		.pipe(gulp.dest(path.img.dest))
-
-		.pipe(newer(path.img.dest))
-		.pipe(webp(app.imagemin))
-		.pipe(gulp.dest(path.img.dest))
+		.pipe(gulp.dest(path.root))
 }
 
 
-export default img;
+export default favicon;

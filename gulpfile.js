@@ -4,6 +4,7 @@ import styles from "./gulp/tasks/styles.js";
 import clear from "./gulp/tasks/del.js";
 import scripts from "./gulp/tasks/scripts.js";
 import img from "./gulp/tasks/images.js";
+import favicon from "./gulp/tasks/favicon.js";
 import browserSyncServe from "browser-sync";
 import run from "gulp4-run-sequence";
 
@@ -35,13 +36,8 @@ const watcher = (done) => {
 	return done();
 };
 
-// const build = gulp.series(
-// 	clear,
-// 	gulp.parallel(html, styles, scripts, img)
-// );
-
 const build = (done) => {
-	run(gulp.series(clear, gulp.parallel(html, styles, scripts, img)), done);
+	run(gulp.series(clear, gulp.parallel(html, styles, scripts, img, favicon)), done);
 };
 const dev = gulp.series(
 	build,
@@ -54,6 +50,7 @@ export { html };
 export { styles };
 export { scripts };
 export { img };
+export { favicon };
 
 export { dev };
 export { build };
