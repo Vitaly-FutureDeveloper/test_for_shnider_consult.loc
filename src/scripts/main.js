@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import {addDateToHTML} from "./module/addDayDateToText.js";
+import {AddDayDateToTextView} from "./module/addDayDateToText/addDayDateToTextView.js";
 
 new Swiper('.swiper',{
 	direction: 'horizontal',
@@ -10,6 +10,5 @@ new Swiper('.swiper',{
 	effect: 'slide',
 });
 
-
-
-addDateToHTML.setMonday(".js-date");
+const dateView = new AddDayDateToTextView(document.querySelector(".header__title"));
+dateView.render();
